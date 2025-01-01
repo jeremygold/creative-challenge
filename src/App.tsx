@@ -18,14 +18,14 @@ const App: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="app-container">
       <h1>Creative Challenge</h1>
-      <ul>
+      <div className="challenge-list">
         {challenges.map((challenge, index) => (
-          <li key={index}>{challenge}</li>
+          <div key={index} className="challenge-item">{challenge}</div>
         ))}
-      </ul>
-      <button onClick={() => setChallenges(getRandomChallenges())}>Refresh</button>
+      </div>
+      <button className="refresh-button" onClick={() => setChallenges(getRandomChallenges())}>Refresh</button>
     </div>
   );
 };
